@@ -4,7 +4,32 @@
         "node_modules/tslint-eslint-rules/dist/rules"
     ],
     "rules": {
+        "directive-selector": [true, "attribute", "app", "camelCase"],
+        "component-selector": [true, "element", "app", "kebab-case"],
+        "curly": false,
+        "deprecation": {
+            "severity": "warn"
+        },
+        "no-conflicting-lifecycle": true,
+        "no-host-metadata-property": true,
+        "no-input-rename": true,
+        "no-inputs-metadata-property": true,
+        "no-output-native": true,
+        "no-output-on-prefix": true,
+        "no-output-rename": true,
+        "no-outputs-metadata-property": true,
+        "template-banana-in-box": true,
+        "template-no-negated-async": true,
+        "use-lifecycle-interface": true,
+        "use-pipe-transform-interface": true,
         "adjacent-overload-signatures": true,
+        "no-var-requires": true,
+        "no-var-keyword": true,
+        "variable-name": [
+            true,
+            "ban-keywords",
+            "require-const-for-all-caps"
+        ],
         "align": [
             false,
             "statements",
@@ -26,7 +51,10 @@
         "eofline": true,
         "forin": true,
         "indent": [true, "spaces"],
-        "max-line-length": [true, 340],
+        "max-line-length": [
+            true,
+            { "limit": 100, "ignore-pattern": "^import [^,]+ from |^export | implements " }
+        ],
         "member-access": true,
         "new-parens": true,
         "no-arg": true,
@@ -71,7 +99,6 @@
         "no-unnecessary-initializer": true,
         "no-unsafe-finally": true,
         "no-unused-expression": false,
-        "no-var-keyword": true,
         "number-literal-format": true,
         "object-literal-shorthand": true,
         "ter-arrow-parens": false,
@@ -129,10 +156,6 @@
         }],
         "unified-signatures": true,
         "use-isnan": true,
-        "variable-name": [
-            true,
-            "ban-keywords"
-        ],
         "whitespace": [true,
             "check-branch",
             "check-decl",
